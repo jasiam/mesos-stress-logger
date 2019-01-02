@@ -1,13 +1,12 @@
 ## Mesos-stress-logger
 
 
-Mesos-stress-logger is a simple docker application which you can use to test the logging solution associated to an Apache Mesos orchestration platform (e.g: Mesosphere DCOS)
-It creates folders containing stdout files based on the following parameters passed as environment variables to docker container:
+Mesos-stress-logger is a simple docker application which you can use to test the logging solution associated to an Apache Mesos orchestration platform like Mesosphere DCOS. It creates folders containing stdout files based on the following parameters passed as environment variables to docker container:
 
-NUM_FILES: Specifies the number of stdout files you cant to be created
-LINES_TO_ADD: How many log lines do you want to append to stdout files for each iteration. Each line will end with the iterator index number.
-KEYWORD: Single word which will be inserted in the middle of the log message to make easier a later search.
-INTERVAL: Time interval (in seconds) the application will wait between logs insertion iteration.
+* NUM_FILES: Specifies the number of stdout files you cant to be created
+* LINES_TO_ADD: How many log lines do you want to append to stdout files for each iteration. Each line will end with the iterator index number.
+* KEYWORD: Single word which will be inserted in the middle of the log message to make easier a later search on your final logs repository (e.g elasticsearch, mongodb, etc...)
+* INTERVAL: Time interval (in seconds) the application will wait between logs insertion iteration.
 
 
 ### Usage
